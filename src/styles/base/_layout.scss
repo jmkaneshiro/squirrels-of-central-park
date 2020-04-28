@@ -1,0 +1,94 @@
+body {
+  font-size: 10px;
+  font-family: $sans-serif;
+  font-weight: 400;
+  background-color: $mint-green;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+h1, h2 {
+  font-family: $serif;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.main-box-shadow {
+  -webkit-box-shadow: 5px 5px 11px 1px rgba(0,0,0,0.5); 
+  box-shadow: 5px 5px 11px 1px rgba(0,0,0,0.5);
+}
+
+//header
+
+header h1 {
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: $pastelle-brown;
+  border-radius: .25rem;
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header img {
+  margin: 1rem;
+  width: 75%;
+}
+
+//Media query
+
+@media only screen and (min-width: 900px) {
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  //header
+  header div {
+    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  header h1 {
+    font-size: 3rem;
+    width: 80%;
+  }
+
+  header p {
+    width: 40%;
+    text-align: left;
+  }
+
+  header img {
+    width: 30%;
+  }
+
+  section {
+    margin: 4rem;
+  }
+}
