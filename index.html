@@ -8,13 +8,16 @@
   <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
   <link rel="stylesheet" href="./dist/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
   <title>Document</title>
 </head>
 
 <body>
   <script src="./dist/main.js"></script>
     <header>
-      <h1 class="main-box-shadow">Squirrels of Central Park</h1>
+      <h1 class="main-box-shadow brown-wrapper">Squirrels of Central Park</h1>
       <div>
         <p>
           In October 2018, 323 volunteer Squirrel Sighters representing Squirrel Census counted the Eastern gray squirrels in
@@ -24,10 +27,22 @@
       </div>
       
     </header>
+    <section class="squirrel-map">
+      <div id="mapid"></div>
+      <div class="map-legend main-box-shadow brown-wrapper">
+        <h2 class=>Squirrels filtered by color</h2>
+        <ul>
+          <li>Gray Squirrel</li>
+          <li>Brown Squirrel</li>
+          <li>Red Squirrel</li>
+        </ul>
+      </div>
+    </section>
     <section>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut elit vel erat aliquam bibendum. Maecenas finibus sit
-        amet libero in blandit. Vestibulum convallis orci non vestibulum iaculis. Morbi at scelerisque lorem, sed lacinia metus.
+        amet libero in blandit. Vestibulum convallis orci non vestibulum iaculis. Morbi at scelerisque lorem, sed lacinia
+        metus.
         Vestibulum molestie libero blandit iaculis porttitor. Vivamus non lacinia dui, eget laoreet ante. Nunc non placerat
         tortor. Praesent libero lacus, commodo ac turpis sit amet, tincidunt faucibus dolor.
       </p>
@@ -53,6 +68,9 @@
         tortor. Praesent libero lacus, commodo ac turpis sit amet, tincidunt faucibus dolor.
       </p>
     </section>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
 </body>
 
 </html>
