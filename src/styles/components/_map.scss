@@ -18,6 +18,12 @@
   margin-left: 3rem;
 }
 
+.leaflet-popup-content {
+  margin: 13px 19px;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
 //Media query
 
 @media only screen and (min-width: 900px) {
