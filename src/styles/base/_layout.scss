@@ -61,28 +61,6 @@ header img {
   margin: 1rem;
   width: 16.5rem;
 }
-//map
-.squirrel-map {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#mapid { 
-  // width: 15rem;
-  // height: 30rem;
-  width: 75vw;
-  height: 30rem;
-}
-
-.map-legend h2 {
-  font-size: 1.25rem;
-}
-.map-legend ul {
-  font-size: 1rem;
-  margin-top: 2rem;
-  margin-left: 3rem;
-}
 
 //Media query
 
@@ -117,25 +95,4 @@ header img {
   section {
     margin: 4rem;
   }
-
-  //map
-  #mapid { 
-  width: 40rem;
-  height: 50rem;
-  }
-  .squirrel-map {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  
-  .map-legend h2 {
-    font-size: 2rem;
-  }
-  .map-legend ul {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-left: 3rem;
-  }
-
 }
