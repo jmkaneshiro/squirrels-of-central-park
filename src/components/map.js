@@ -6,29 +6,17 @@ export function Map() {
   const squirrelMap = L.map('mapid').setView([40.782864, -73.965355], 15);
 
   //Add icons for each squirrel type
-  const cinnamonSquirrelIcon = L.icon({
-    iconUrl: "/assets/map_icons/cinnamon-squirrel-icon.svg",
-
-    iconSize: [20, 20], // size of icon
-    iconAnchor: [10, 20], // set anchor relative to icon
-    popupAnchor: [5, -18] //set popup relative to anchor
+  const SquirrelIcon = L.Icon.extend({
+    options: {
+      iconSize: [20, 20], // size of icon
+      iconAnchor: [10, 20], // set anchor relative to icon
+      popupAnchor: [5, -18] //set popup relative to anchor
+    }
   });
 
-  const graySquirrelIcon = L.icon({
-    iconUrl: "/assets/map_icons/gray-squirrel-icon.svg",
-
-    iconSize: [20, 20], // size of icon
-    iconAnchor: [10, 20], // set anchor relative to icon
-    popupAnchor: [5, -18] //set popup relative to anchor
-  });
-
-  const blackSquirrelIcon = L.icon({
-    iconUrl: "/assets/map_icons/black-squirrel-icon.svg",
-
-    iconSize: [20, 20], // size of icon
-    iconAnchor: [10, 20], // set anchor relative to icon
-    popupAnchor: [5, -18] //set popup relative to anchor
-  });
+  const graySquirrelIcon = new SquirrelIcon({ iconUrl: "/assets/map_icons/gray-squirrel-icon.svg" }),
+        cinnamonSquirrelIcon = new SquirrelIcon({ iconUrl: "/assets/map_icons/cinnamon-squirrel-icon.svg" }),
+        blackSquirrelIcon = new SquirrelIcon({ iconUrl: "/assets/map_icons/black-squirrel-icon.svg" });
 
   // Create base tile for map
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
