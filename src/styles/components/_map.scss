@@ -9,30 +9,22 @@
   height: 30rem;
 }
 
-.map-legend h2 {
+.squirrel-filter {
+  font-size: 0.8rem;
+}
+.squirrel-filter h2 {
   font-size: 1.25rem;
 }
-.map-legend ul {
-  font-size: 1rem;
-  margin-top: 2rem;
-  margin-left: 3rem;
+.squirrel-filter input {
+  vertical-align: middle;
+  margin-left: 1rem;
 }
 
-.leaflet-popup-content {
-  margin: 13px 19px;
-  line-height: 1.4;
-}
+.squirrel-filter label {
+  margin-left: .5rem;
 
-.leaflet-popup-content h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.leaflet-popup-content li {
-  text-decoration: none;
-  font-family: $serif;
-  font-weight: 600;
-  font-size: .75rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 //Media query
@@ -47,13 +39,21 @@
     justify-content: space-around;
     align-items: flex-start;
   }
-  
-  .map-legend h2 {
+  .squirrel-filter {
+    font-size: 1.5rem;
+  }
+  .squirrel-filter h2 {
     font-size: 2rem;
   }
-  .map-legend ul {
-    font-size: 1.5rem;
-    margin-top: 2rem;
+  .squirrel-filter input {
+    vertical-align: middle;
     margin-left: 3rem;
+  }
+
+  .squirrel-filter label {
+    margin-left: .5rem;
+
+    display: inline-block;
+    vertical-align: middle;
   }
 }
