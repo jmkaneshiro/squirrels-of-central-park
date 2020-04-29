@@ -21,7 +21,18 @@
 .leaflet-popup-content {
   margin: 13px 19px;
   line-height: 1.4;
-  font-size: 1rem;
+}
+
+.leaflet-popup-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.leaflet-popup-content li {
+  text-decoration: none;
+  font-family: $serif;
+  font-weight: 600;
+  font-size: .75rem;
 }
 
 //Media query
