@@ -3,8 +3,7 @@ import "../config/keys";
 
 export function Map() {
   const MAPBOX_TOKEN = require("../config/keys").MAPBOX_TOKEN;
-  const squirrelMap = L.map('mapid').setView([40.782864, -73.965355], 15);
-
+  const squirrelMap = L.map('mapid');
   //Add icons for each squirrel type
   const SquirrelIcon = L.Icon.extend({
     options: {
@@ -34,7 +33,7 @@ export function Map() {
   xhr.open('GET', 'https://data.cityofnewyork.us/resource/vfnx-vebw.geojson');
   xhr.onload = () => {
     const data = JSON.parse(xhr.response);
-    L.geoJSON(data, {
+    const addedGeoJSON = L.geoJSON(data, {
       //Set squirrel icon based on geoJSON property primary_fur_color
       pointToLayer: function (feature, latlng) {
         const primaryFurColor = feature.properties.primary_fur_color;
@@ -65,6 +64,10 @@ export function Map() {
         );
       }
     }).addTo(squirrelMap);
+
+    squirrelMap.fitBounds(addedGeoJSON.getBounds(), {
+      padding: [20,20]
+    });
   };
   xhr.send();
 }
