@@ -1,7 +1,6 @@
 import "./styles/index.scss";
 import "./config/keys";
 import { Map } from './components/map';
-import { Graph } from './components/graph';
 import { Stories } from './components/stories';
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -9,8 +8,8 @@ window.addEventListener("DOMContentLoaded", () => {
   new Map(map);
   new Stories();
 
-  document.getElementById("squirrel-mascot").addEventListener("click", function () {
-    document.getElementById("squirrel-mascot").classList.toggle("rotate-counter-clock-on-click");
+  document.getElementById("squirrel-mascot").addEventListener("click", function (e) {
+    e.currentTarget.classList.toggle("rotate-counter-clock-on-click");
   });
 });
 
