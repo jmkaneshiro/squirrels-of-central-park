@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
   <link rel="stylesheet" href="./dist/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -14,6 +15,7 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
   <title>Document</title>
 </head>
 
@@ -30,57 +32,39 @@
       </div>
       
     </header>
-    <section class="squirrel-map">
+    <section class="section-squirrel-map">
       <div class="map-wrapper">
-          <div id="mapid" component="map"></div>
-          <div>Map squirrel icon made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a
-              href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div id="mapid" component="map"></div>
+        <div>Map squirrel icon made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
       </div>
-
       <div class="squirrel-filter main-box-shadow brown-wrapper">
         <h2>Filter Squirrels</h2>
         <div class="filter-categories">
           <h3>Fur color</h3>
           <div class="filter-options">
-            <input type="checkbox" id="filter-fur-gray" value="Gray" checked>
-            <label for="filter-fur-gray">Gray</label>
-            <input type="checkbox" id="filter-fur-cinnamon" value="Cinnamon" checked>
-            <label for="filter-fur-cinnamon">Cinnamon</label>
-            <input type="checkbox" id="filter-fur-black" value="Black" checked>
-            <label for="filter-fur-black">Black</label>
+            <div>
+              <input type="checkbox" id="filter-fur-gray" value="Gray" checked>
+              <label for="filter-fur-gray">Gray</label>
+            </div>
+            <div>
+              <input type="checkbox" id="filter-fur-cinnamon" value="Cinnamon" checked>
+              <label for="filter-fur-cinnamon">Cinnamon</label>
+            </div>
+            <div>
+              <input type="checkbox" id="filter-fur-black" value="Black" checked>
+              <label for="filter-fur-black">Black</label>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut elit vel erat aliquam bibendum. Maecenas finibus sit
-        amet libero in blandit. Vestibulum convallis orci non vestibulum iaculis. Morbi at scelerisque lorem, sed lacinia
-        metus.
-        Vestibulum molestie libero blandit iaculis porttitor. Vivamus non lacinia dui, eget laoreet ante. Nunc non placerat
-        tortor. Praesent libero lacus, commodo ac turpis sit amet, tincidunt faucibus dolor.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut elit vel erat aliquam bibendum. Maecenas finibus sit
-        amet libero in blandit. Vestibulum convallis orci non vestibulum iaculis. Morbi at scelerisque lorem, sed lacinia
-        metus.
-        Vestibulum molestie libero blandit iaculis porttitor. Vivamus non lacinia dui, eget laoreet ante. Nunc non placerat
-        tortor. Praesent libero lacus, commodo ac turpis sit amet, tincidunt faucibus dolor.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut elit vel erat aliquam bibendum. Maecenas finibus sit
-        amet libero in blandit. Vestibulum convallis orci non vestibulum iaculis. Morbi at scelerisque lorem, sed lacinia
-        metus.
-        Vestibulum molestie libero blandit iaculis porttitor. Vivamus non lacinia dui, eget laoreet ante. Nunc non placerat
-        tortor. Praesent libero lacus, commodo ac turpis sit amet, tincidunt faucibus dolor.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut elit vel erat aliquam bibendum. Maecenas finibus sit
-        amet libero in blandit. Vestibulum convallis orci non vestibulum iaculis. Morbi at scelerisque lorem, sed lacinia
-        metus.
-        Vestibulum molestie libero blandit iaculis porttitor. Vivamus non lacinia dui, eget laoreet ante. Nunc non placerat
-        tortor. Praesent libero lacus, commodo ac turpis sit amet, tincidunt faucibus dolor.
-      </p>
+
+    <section class="section-stories">
+      <div class="main-box-shadow brown-wrapper">
+        <h2>Stories From the Volunteers</h1>
+        <p id="stories-loop"></p>
+      </div>
     </section>
 </body>
 

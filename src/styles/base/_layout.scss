@@ -1,6 +1,6 @@
 body {
   font-size: 10px;
-  font-family: $sans-serif;
+  font-family: $sans-serif-secondary;
   font-weight: 400;
   background-color: $mint-green;
 }
@@ -15,8 +15,19 @@ header {
 }
 
 h1, h2 {
-  font-family: $serif;
+  font-family: $sans-serif-primary;
   font-weight: 700;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  opacity: .7;
 }
 
 p {
@@ -26,13 +37,21 @@ p {
   margin: 1rem;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2.5rem;
+}
+
 .main-box-shadow {
   -webkit-box-shadow: 5px 5px 11px 1px rgba(0,0,0,0.5); 
   box-shadow: 5px 5px 11px 1px rgba(0,0,0,0.5);
 }
 
 .brown-wrapper {
-  margin: 1rem;
   padding: 1rem;
   background-color: $pastelle-brown;
   border-radius: .25rem;
@@ -41,9 +60,8 @@ p {
 //header
 
 header h1 {
-  font-size: 2rem;
   margin-top: 2rem;
-  text-align: center;
+  width: 75vw;
 }
 
 header p {
@@ -70,17 +88,30 @@ header img {
     font-size: 1.5rem;
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
   //header
+  section {
+    width: 85vw;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    width: 85vw;
+  }
+
   header div {
     margin-top: 4rem;
     margin-left: 4rem;
     margin-right: 4rem;
     justify-content: space-around;
     flex-direction: row;
-  }
-  header h1 {
-    font-size: 3rem;
-    width: 80%;
   }
 
   header p {
@@ -90,9 +121,5 @@ header img {
 
   header img {
     width: 30%;
-  }
-
-  section {
-    margin: 4rem;
   }
 }

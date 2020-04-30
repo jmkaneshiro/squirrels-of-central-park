@@ -1,20 +1,22 @@
-.squirrel-map {
+
+.map-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#mapid { 
-  width: 75vw;
+#mapid {
+  width: 100%;
   height: 30rem;
+  border-radius: .25rem;
 }
 
 .squirrel-filter {
   font-size: 0.8rem;
+  width: 93%;
+  margin: 1rem auto;
 }
-.squirrel-filter h2 {
-  font-size: 1.25rem;
-}
+
 .squirrel-filter input {
   vertical-align: middle;
   margin-left: 1rem;
@@ -27,33 +29,45 @@
   vertical-align: middle;
 }
 
+.filter-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.leaflet-popup-content h2, .leaflet-popup-content li {
+  opacity: 1;
+}
+
+.leaflet-popup-content h2 {
+  font-size: 1rem;
+}
+
+.leaflet-popup-content li {
+  font-size: .75rem;
+}
+
 //Media query
 
-@media only screen and (min-width: 900px) {
-  #mapid { 
-  width: 40rem;
-  height: 50rem;
-  }
-  .squirrel-map {
+@media only screen and (min-width: 670px) {
+  .section-squirrel-map {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
   }
+
+  .map-wrapper {
+    width: 45%;
+  }
+
+  .squirrel-filter {
+    margin: 0 0 0 1rem;
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   .squirrel-filter {
     font-size: 1.5rem;
-  }
-  .squirrel-filter h2 {
-    font-size: 2rem;
-  }
-  .squirrel-filter input {
-    vertical-align: middle;
-    margin-left: 3rem;
-  }
-
-  .squirrel-filter label {
-    margin-left: .5rem;
-
-    display: inline-block;
-    vertical-align: middle;
   }
 }
