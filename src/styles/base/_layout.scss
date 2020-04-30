@@ -80,6 +80,11 @@ header img {
   width: 16.5rem;
 }
 
+.rotate-counter-clock-on-click {
+  transform: rotate(-360deg);
+  transition: all 1.5s ease-in-out;
+}
+
 //Media query
 
 @media only screen and (min-width: 900px) {
