@@ -1,8 +1,11 @@
-import "../config/keys";
-
+// import "../config/keys";
+import graySquirrelImg from "../assets/map_icons/gray-squirrel-icon.svg";
+import blackSquirrelImg from "../assets/map_icons/black-squirrel-icon.svg";
+import cinnamonSquirrelImg from "../assets/map_icons/cinnamon-squirrel-icon.svg";
 
 export function Map() {
-  const MAPBOX_TOKEN = require("../config/keys").MAPBOX_TOKEN;
+  // Need following line if mapbox used
+  // const MAPBOX_TOKEN = require("../config/keys").MAPBOX_TOKEN;
   const squirrelMap = L.map('mapid');
   //Add icons for each squirrel type
   const SquirrelIcon = L.Icon.extend({
@@ -13,9 +16,9 @@ export function Map() {
     }
   });
 
-  const graySquirrelIcon = new SquirrelIcon({ iconUrl: "/assets/map_icons/gray-squirrel-icon.svg" }),
-        cinnamonSquirrelIcon = new SquirrelIcon({ iconUrl: "/assets/map_icons/cinnamon-squirrel-icon.svg" }),
-        blackSquirrelIcon = new SquirrelIcon({ iconUrl: "/assets/map_icons/black-squirrel-icon.svg" });
+  const graySquirrelIcon = new SquirrelIcon({ iconUrl: graySquirrelImg }),
+    cinnamonSquirrelIcon = new SquirrelIcon({ iconUrl: cinnamonSquirrelImg }),
+    blackSquirrelIcon = new SquirrelIcon({ iconUrl: blackSquirrelImg });
 
   function defaultPopup(feature, layer) {
     const { primary_fur_color, shift, foraging, climbing, running } = feature.properties;
@@ -35,16 +38,25 @@ export function Map() {
         </ul>`
     );
   }
+  //For a prettier map, consider using Mapbox in the future
+  //Mapbox requires you to have an account and unique API key
+  // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  //   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  //   maxZoom: 18,
+  //   minZoom: 14,
+  //   id: 'mapbox/streets-v11',
+  //   tileSize: 512,
+  //   zoomOffset: -1,
+  //   accessToken: `${MAPBOX_TOKEN}`
+  // }).addTo(squirrelMap);
 
-  // Create base tile for map
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  // Create base tile for map with openstreetmap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
     maxZoom: 18,
     minZoom: 14,
-    id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: `${MAPBOX_TOKEN}`
   }).addTo(squirrelMap);
 
   // Plot squirrel markers and popups on mapwhen geoJSON is loaded from Api

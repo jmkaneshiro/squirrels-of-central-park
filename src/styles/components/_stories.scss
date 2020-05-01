@@ -1,10 +1,50 @@
 .section-stories {
-  min-width: 75vw;
+  width: 75vw;
+  height: 400px;
+  position: relative;
+  perspective: 800px;
+  margin-bottom: 4rem;
+}
+
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+#card .front, #card .back {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#card .front > h2 {
+  backface-visibility: hidden;
+}
+
+#card .front {
+  left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card .back {
+  right: 10px;
+  transform: rotateY( 180deg);
+}
+
+#card.flipped {
+  transform: rotateY( 180deg);
 }
 
 @media only screen and (min-width: 900px) {
   .section-stories {
-    margin: 2rem auto;
-    min-width: 85%;
+    min-width: 85vw;
   }
 }
