@@ -1,14 +1,20 @@
 export function Stories() {
-  const storyCard = document.getElementById('stories-loop');
 
   const fetchRandomStory = () => (
     fetch('https://data.cityofnewyork.us/resource/gfqj-f768.json')
     .then(response => response.json())
-    .then(data =>
-      document.getElementById('stories-loop').innerHTML = data[Math.floor(Math.random() * data.length)].note_squirrel_park_stories
+    .then(data => 
+      document.getElementById('story-details').innerHTML = data[Math.floor(Math.random() * data.length)].note_squirrel_park_stories
   ));
 
-  fetchRandomStory();
+  const card = document.getElementById('card');
 
-  document.getElementById("test-button").addEventListener("click", fetchRandomStory);
+  document.getElementById('card-front').addEventListener('click', function () {
+    fetchRandomStory();
+    card.classList.toggle('flipped');
+  }, false);
+
+  document.getElementById('card-back').addEventListener('click', function () {
+    card.classList.toggle('flipped');
+  }, false);
 }
