@@ -15,7 +15,7 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <title>Document</title>
+  <title>Squirrels of Central Park</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
       <h1 class="main-box-shadow brown-wrapper">Squirrels of Central Park</h1>
       <div>
         <p>
-          In October 2018, 323 volunteer Squirrel Sighters representing Squirrel Census counted the Eastern gray squirrels in
+          In October 2018, 323 volunteer Squirrel Sighters representing <a href="https://www.thesquirrelcensus.com/" target="_blank">The Squirrel Census</a> counted the Eastern gray squirrels in
           Central Park. This projects aims to visualize the data in a playful way that embodies the spirit of the project.
         </p>
         <img src="./src/assets/squirrel-mascot.svg" alt="squirrel-mascot" class="main-box-shadow" id="squirrel-mascot">
@@ -57,16 +57,18 @@
           </div>
         </div>
         <br>
-        <p>Click on individual squirrels to get more information about a particular siting.</p>
+        <p>Click on individual squirrels to get more information about a particular sighting.</p>
       </div>
     </section>
     <section class="section-stories">
         <div id="card">
           <div class="front brown-wrapper main-box-shadow" id="card-front">
-            <h2>Click Card To See Volunteer Stories!</h2>
+            <h2>Click this card to see more volunteer stories</h2>
+            <p id="story-details-front"></p>
           </div>
           <div class="back brown-wrapper main-box-shadow" id="card-back">
-            <p id="story-details"></p>
+            <h2>Click this card to see more volunteer stories</h2>
+            <p id="story-details-back"></p>
           </div>
         </div>
     </section>

@@ -1,6 +1,5 @@
 .section-stories {
-  width: 75vw;
-  height: 400px;
+  width: 78vw;
   position: relative;
   perspective: 800px;
   margin-bottom: 4rem;
@@ -8,18 +7,16 @@
 
 #card {
   width: 100%;
-  height: 100%;
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
 
 #card .front, #card .back {
-  margin: 0;
-  display: block;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  position: absolute;
   backface-visibility: hidden;
 }
 
@@ -28,14 +25,13 @@
 }
 
 #card .front {
-  left: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #card .back {
-  right: 10px;
+  right: 4px;
   transform: rotateY( 180deg);
 }
 
@@ -46,5 +42,16 @@
 @media only screen and (min-width: 900px) {
   .section-stories {
     min-width: 85vw;
+  }
+  #card {
+    margin-top: 2rem;
+  }
+
+  #card .front {
+    left: 0px;
+  }
+
+  #card .back {
+    right: 0px;
   }
 }
