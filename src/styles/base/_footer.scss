@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  color: black;
+  padding: 18px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $pastelle-brown;
+}
+
+footer p, footer .fab, footer .far  {
+  margin: 0.5rem 0rem;
+}
+
+footer .fab, footer .far {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+
+
+//Media query
+@media only screen and (min-width: 900px) {
+
+  footer .fab, footer .far {
+    font-size: 2rem;
+    padding-left: 0.5rem;
+  }
+}
