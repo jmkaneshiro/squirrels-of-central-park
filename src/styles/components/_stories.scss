@@ -1,23 +1,27 @@
 .section-stories {
-  width: 78vw;
-  position: relative;
   perspective: 800px;
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #card {
   width: 100%;
-  position: absolute;
+  height: 250px;
   transform-style: preserve-3d;
   transition: transform 1s;
+  position: relative;
 }
 
 #card .front, #card .back {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   position: absolute;
   backface-visibility: hidden;
+  height: 150px;
+  overflow: scroll;
 }
 
 #card .front > h2 {
@@ -28,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 4px;
 }
 
 #card .back {
@@ -41,10 +46,17 @@
 
 @media only screen and (min-width: 900px) {
   .section-stories {
-    min-width: 85vw;
+    width: 80vw;
+    margin-bottom: 2rem;
   }
   #card {
     margin-top: 2rem;
+    height: 350px;
+  }
+
+  #card .front, #card .back {
+    width: 100%;
+    height: 300px;
   }
 
   #card .front {
