@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="./src/assets/favicon.ico" rel="icon" type="image/x-icon" />
   <link rel="stylesheet" href="./dist/main.css" />
@@ -42,18 +42,18 @@
         <div class="filter-categories">
           <h3>Fur color</h3>
           <div class="filter-options">
-            <div>
-              <input type="checkbox" id="filter-fur-gray" value="Gray" checked>
-              <label for="filter-fur-gray">Gray</label>
-            </div>
-            <div>
-              <input type="checkbox" id="filter-fur-cinnamon" value="Cinnamon" checked>
-              <label for="filter-fur-cinnamon">Cinnamon</label>
-            </div>
-            <div>
-              <input type="checkbox" id="filter-fur-black" value="Black" checked>
-              <label for="filter-fur-black">Black</label>
-            </div>
+              <label for="filter-fur-gray" class="checkmark-container">Gray
+                <input type="checkbox" id="filter-fur-gray" value="Gray" checked>
+                <span class="checkmark"></span>
+              </label>
+              <label for="filter-fur-cinnamon" class="checkmark-container">Cinnamon
+                <input type="checkbox" id="filter-fur-cinnamon" value="Cinnamon" checked>
+                <span class="checkmark"></span>
+              </label>
+              <label for="filter-fur-black" class="checkmark-container">Black
+                <input type="checkbox" id="filter-fur-black" value="Black" checked>
+                <span class="checkmark"></span>
+              </label>
           </div>
         </div>
         <br>
