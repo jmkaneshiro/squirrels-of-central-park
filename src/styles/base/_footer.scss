@@ -8,15 +8,20 @@ footer {
   padding: 18px 0px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   background-color: $pastelle-brown;
 }
 
-footer p, footer .fab, footer .far  {
+footer p a {
+  text-decoration: underline;
+}
+
+footer p, footer .fab, footer .far, footer .fa  {
   margin: 0.5rem 0rem;
 }
 
-footer .fab, footer .far {
+footer .fab, footer .far, footer .fa {
   font-size: 1.5rem;
   padding-left: 0.5rem;
 }
@@ -26,7 +31,7 @@ footer .fab, footer .far {
 //Media query
 @media only screen and (min-width: 900px) {
 
-  footer .fab, footer .far {
+  footer .fab, footer .far, footer .fa {
     font-size: 2rem;
     padding-left: 0.5rem;
   }
