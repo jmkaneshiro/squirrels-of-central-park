@@ -4,15 +4,11 @@
   "description": "## Summary In October 2018, 323 volunteer Squirrel Sighters representing [Squirrel Census](https://www.thesquirrelcensus.com/) counted the Eastern gray squirrels in Central Park. This projects aims to visualize the data in a playful way that embodies the spirit of the project.",
   "main": "index.js",
   "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
+    "defaults"
   ],
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
-    "webpack:watch": "webpack --watch --config webpack.dev.js",
-    "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
+    "webpack:build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
