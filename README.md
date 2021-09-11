@@ -1,4 +1,4 @@
-# Squirrels of Central Park
+# Squirrels of Central Park [PROJECT NO LONGER MAINTAINED]
 
 ## Summary
 In October 2018, 323 volunteer Squirrel Sighters representing [Squirrel Census](https://www.thesquirrelcensus.com/) counted the Eastern gray squirrels in Central Park. This project aims to visualize the data in a playful way that embodies the spirit of the project.
